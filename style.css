@@ -115,3 +115,24 @@ footer{
     padding: 0;
 }
 
+@media (max-width:800px){
+
+    .barra {
+       display: block;
+       justify-content: center;
+   }
+   
+   ul {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   
+   li {
+       float: none;
+       width: 100%;
+       text-align: center;
+       border-right: none;
+  
+   }
+}
