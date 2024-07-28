@@ -50,15 +50,15 @@ td{
 }
 
 
-
+ba
     
     
-.responsive{
-    display: none;
+/* .responsive{
+    display: none; */
     /* La propiedad CSS display especifica si un elemento es tratado como block or inline element y el diseño usado por sus hijos, como flow layout(Diseño de Flujo), grid(Cuadricula) o flex(Flexible). 
     Formalmente la propiedad display establece los tipos de visualización interna y externa de un elemento */
-}
-@media (max-width:800px){
+/* } */
+/* @media (max-width:800px){
  .responsive{
    display: block;
    float: right;
@@ -66,7 +66,7 @@ td{
  }
 .barra {display: none;
  }
-}
+} */
 
 .grid-contenedor{
     display: grid;
