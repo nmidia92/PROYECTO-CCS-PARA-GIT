@@ -4,13 +4,10 @@
   margin: 0 auto; /* Márgenes automáticos para centrar */
   padding: 20px;
   max-width: 1200px; /* Limita el ancho máximo */
-  width: 100%; /* Ancho del 70% del contenedor padre, aumentando los márgenes */
+  width: auto;
   background-color: #fff;
-  /* border: 1px solid #ddd; */
-  /* border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-}
 
+}
 
 .articulo {
   margin-bottom:  20px;
