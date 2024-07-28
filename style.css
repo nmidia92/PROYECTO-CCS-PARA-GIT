@@ -1,0 +1,117 @@
+ul{
+    list-style-type: none;
+    /* para que no aparezcan las viñetas tipo lista */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* La propiedad overflow en CSS es una propiedad que nos permite determinar 
+    lo que sucede con un elemento cuando su contenido sobrepasa 
+    los límites de su contenedor. */
+    /* no queremos scroll ni nada asi que lo escondemos */
+    background-color: rgb(211, 216, 210);
+
+}
+
+li{
+    float: left;
+    /* para que el menu vaya hacia la izquierda */
+    border-right: 1px solid; color:  rgb(241, 250, 241);
+}
+
+li:last-child{
+    border-right: none;
+    border-left: 1px solid; color:  rgb(241, 250, 241);
+  
+}
+
+/* esto de abajo era una seleccion combinada */
+li a{
+    /* "li a" son los links dentro de la lista */
+    display: block;
+    /* para que ocupen todo el ancho */
+    color: rgb(10, 87, 34);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    /* para que ocupe el centro del espacio que tenga */
+    padding: 10px 15px;
+    /* para que tenga espacio dentro del boton */
+    text-decoration: none;
+    /* esto es para sacar el subrayado y el azul tipico del link*/
+
+
+}
+.active{
+    background-color: rgb(170, 245, 41);
+    /* ESTO ES PARA QUE APAREZCA COLORIDO LA PESTAÑA QUE TENEMOS SELECCIONADA */
+}
+
+/* AHORA QUE PASA SI TENGO UNA PESTAÑA SELECCIONADA, PERO TAMBIÉN QUIERO QUE 
+LAS OTRAS TENGA EL EFECTO "HOVER" CUANDO LE PASAS EL MOUSE POR ENCIMA.
+ADEMÁS TENGO QUE DEJAR EXCENTA DE ESTA SELECCION A LA PESTAÑA ACTIVA, PUES ASÍ  */
+
+li a:hover:not(.active){
+    background-color:  rgb(225, 248, 186);
+    /* para poder aplicar hover en las otras pestañas, 
+    -o-animation-name: ;que cambiaran de color sin estar cliqueadas, cuando solo pasas el mouse por arriba */
+
+}
+
+/* INFO: PARA SELECCIONAR ATRIBUTOS SE PUEDEN UTILIZAR CORCHETES E INCLUSO HACERLO MÁS ESPECÍFICO
+DANDOLE UN VALOR.   */
+
+/* Los keyframes o fotogramas clave son reglas CSS que se irán aplicando 
+partiendo de un estado inicial de 0% hasta llegar a un estado final de 100%. */
+
+body{
+    background-color: rgb(241, 250, 241);
+    color: rgb(110, 110, 110);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    background-color: rgb(10, 87, 34);
+    color: white;
+    text-align:center;
+    padding: 0;
+    margin: 0;
+}
+
+footer{
+    background-color: rgb(10, 87, 34);
+    color: white;
+    text-align:center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    /* para que quede pegado abajo */
+    width: 100%;
+}
+
+.redesFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redesFooter i {
+    margin: 0 10px;
+    font-size: 24px;
+    transition: transform 0.3s, color 0.3s;
+    color: white;
+}
+
+.redesFooter i:hover {
+    transform: scale(1.2);
+}
+
+
+
+.irContacto {
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+}
+

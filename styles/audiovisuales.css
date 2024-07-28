@@ -1,0 +1,102 @@
+body {
+    background-color: rgb(6, 51, 21);
+    margin: 0;
+    padding: 0;
+}
+.contenedorVideo {
+    position: relative;
+    padding-bottom: 36.5%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-top: 0;
+}
+
+.contenedorVideo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    
+}
+
+.ocultarControles { /* para ocultar los controles del video sin java sript*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5);  */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.video-container:hover .overlay {
+    opacity: 1; /* Mostrar overlay al hacer hover */
+}
+
+.video-container:hover video {
+    cursor: pointer; /* Cambiar cursor al hacer hover */
+}
+
+.textoVideo {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-70%, -70%);
+    text-align: left;
+    color: #fff;
+
+    text-shadow:green;
+    padding: 20px;
+}
+
+
+.textoVideo p {
+    font-size: 4vw;
+}
+
+.listaReproduccion {
+ 
+    display: flex;
+    flex-wrap: wrap;
+    /* Este contenedor usa flex para organizar 
+    los videos. flex-wrap: wrap permite que los elementos 
+    se ajusten en varias filas si es necesario */
+    justify-content: center;
+    gap: 16px; /*espacio entre los videos*/
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.videoItem {
+    flex: 1 1 300px;
+
+    /*flex-grow (1): Este valor define la capacidad del elemento para crecer si es necesario. En este caso, 1 significa que el elemento puede crecer para llenar el espacio disponible. Si hay varios elementos con flex-grow establecido en 1, todos crecerán proporcionalmente.
+
+flex-shrink (1): Este valor define la capacidad del elemento para encogerse si es necesario. En este caso, 1 significa que el elemento puede encogerse si el espacio disponible es menor que el necesario. Si hay varios elementos con flex-shrink establecido en 1, todos se encogerán proporcionalmente.
+
+ flex-basis (300px): Este valor define la base inicial del elemento antes de que se aplique cualquier espacio flexible (antes de que el elemento crezca o se encoja). En este caso, 300px significa que el elemento intentará tener un ancho base de 300 píxeles. */
+    max-width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.videoItem iframe {
+    width: 100%;
+    height: 169px; /* Ajuste para la relación de aspecto 16:9 */
+}
+
+@media (max-width: 800px) {
+    .video-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+

@@ -1,0 +1,60 @@
+
+
+.contenedorArticulo {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    max-width: 1200px; 
+    width: 100%; 
+    background-color: #fff;
+ 
+  }
+
+
+
+
+
+@media (max-width:800px){
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+/* 
+    Cada celda (td) utiliza el atributo data-label para proporcionar 
+    una etiqueta que se muestra antes del contenido de la celda en la vista apilada. */
+/* El contenido de data-label se utiliza en una pseudoclase (::before) 
+para mostrar la etiqueta asociada en pantallas pequeñas, imitando el 
+comportamiento de encabezados visibles junto a los datos. */
+}
+/* La función attr() en CSS se utiliza para extraer y mostrar el valor de un atributo HTML en una pseudoelemento (::before o ::after). Es particularmente útil para mejorar la accesibilidad y la presentación de tablas en dispositivos móviles, donde se pueden mostrar los encabezados de las columnas junto a cada celda en una vista apilada.
+
+Aquí te explico cómo se usa attr() en el contexto de tablas responsivas:
+
+Propósito:
+
+attr() permite acceder al valor de un atributo HTML, como data-label, y utilizar ese valor en el contenido generado por un pseudoelemento.
+Esto es útil para mostrar etiquetas o encabezados junto a cada celda en una vista apilada (stacked view) en dispositivos móviles. */

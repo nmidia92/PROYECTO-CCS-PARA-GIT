@@ -1,0 +1,55 @@
+
+
+.contenedorArticulo {
+  margin: 0 auto; /* Márgenes automáticos para centrar */
+  padding: 20px;
+  max-width: 1200px; /* Limita el ancho máximo */
+  width: 100%; /* Ancho del 70% del contenedor padre, aumentando los márgenes */
+  background-color: #fff;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+
+.articulo {
+  margin-bottom:  20px;
+}
+
+.IMAGEN1 {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    margin: 0 auto 20px auto;
+}
+
+.videoContenedor {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+
+    /* 56.25%;  */
+    /* Proporción 16:9 (para videos de YouTube) */
+    /* para mantener la proporción 16:9 del video de YouTube.
+     Este valor es el resultado de dividir 9 entre 16
+     y multiplicarlo por 100 para obtener un porcentaje. */
+    height: 0%;
+    overflow: hidden;
+    /* height: 0; y padding-bottom 
+    combinados crean un contenedor con altura cero pero
+     con una relación de aspecto adecuada para el video. */
+    margin-bottom: 20%;
+
+
+  }
+
+  .videoContenedor iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+

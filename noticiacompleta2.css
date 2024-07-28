@@ -1,0 +1,65 @@
+
+.contenedorArticulo {
+    margin: 0 auto; 
+    padding: 20px;
+    max-width: 1200px; 
+    width: 100%;
+    background-color: #fff;
+
+  }
+
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+
+    /* Gallery: Utiliza flexbox para organizar los elementos.
+     flex-wrap: wrap asegura que los elementos se ajusten en filas,
+      y justify-content: center centra los elementos. */
+}
+
+.item-galeria{
+    flex: 1 1 calc(25% - 20px); /* Ajusta el tamaño según sea necesario */
+
+/* El valor flex: 1 1 calc(25% - 20px); se utiliza para definir cómo los elementos flexibles se comportan dentro de un contenedor flex. En este caso específico, se desglosa de la siguiente manera:
+
+flex: 1: Esto significa que el elemento puede crecer y ocupar el espacio disponible en proporción al valor de flex-grow (que es 1 en este caso). Es decir, si hay espacio disponible en el contenedor, todos los elementos con flex: 1 se repartirán ese espacio adicional de manera equitativa.
+
+1: Este es el valor de flex-shrink, que indica que el elemento puede reducirse si es necesario. Todos los elementos con flex-shrink: 1 se reducirán de manera equitativa si el espacio del contenedor no es suficiente para acomodarlos en su tamaño inicial.
+
+calc(25% - 20px): Esto es el valor de flex-basis, que especifica el tamaño inicial del elemento antes de que se distribuya cualquier espacio adicional. calc(25% - 20px) es una función CSS que calcula el tamaño inicial del elemento. En este caso, se indica que el tamaño inicial del elemento será el 25% del ancho del contenedor menos 20px. Esta resta de 20px tiene en cuenta el margen o el espacio entre los elementos.
+
+En resumen, flex: 1 1 calc(25% - 20px); significa que cada elemento:
+
+Puede crecer proporcionalmente al espacio disponible (flex-grow: 1).
+Puede reducirse proporcionalmente si es necesario (flex-shrink: 1).
+Tendrá un tamaño base calculado como el 25% del contenedor menos 20px (flex-basis: calc(25% - 20px)).
+Esto asegura que los elementos se distribuyan uniformemente dentro del contenedor flex, con un tamaño base que se ajusta a un cuarto del contenedor menos un margen para el espacio entre los elementos. Aquí tienes el ejemplo ajustado para tener una mejor idea: */
+    box-sizing: border-box;
+    margin: 10px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+
+}
+
+.item-galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.item-galeria:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width:800px){
+ .galeria{
+    display: block;
+    padding: 10px;
+ }
+
+    }

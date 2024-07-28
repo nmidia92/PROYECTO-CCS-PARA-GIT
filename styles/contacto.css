@@ -1,0 +1,112 @@
+
+body{
+        background: url(/ASSETS/img/fondo\ contacto.jpg) no-repeat center center;
+}
+
+
+h1 {
+    font-size: 4.5vw;
+    padding: 15px;
+}
+h2 {
+    background-color: rgb(3, 48, 15);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    margin-top: 0;
+    font-size: 2.5vw;
+ 
+}
+.contenedorArticulo {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(225, 248, 186);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: transparent;
+    border-radius: 20px;
+ 
+  }
+
+  .otrosDatos {
+    background-color: transparent;
+  }
+
+  .contenedor {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .contenedor, .otrosDatos{
+
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    
+}
+
+
+
+/* para dar estilo a los input vamos a usar los selectores por atributos */
+
+input[type="text"],
+input[type="email"],
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid green;
+    border-radius: 10px;
+    box-sizing: border-box;
+    /* este sirve para que la caja no se corte, quede hmogenea con las casillas de input, sino se sobresalen */
+}
+
+input[type="submit"]{
+    width: 100%;
+    background-color: rgb(166, 191, 166);
+    font-size: 1.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border:  green;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
+
+}
+
+text:focus, input:focus {
+    background-color: rgb(170, 245, 41);
+}
+
+
+input[type="submit"]:hover{
+    background-color: rgb(170, 245, 41);
+}
+
+.redesSociales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.redesSociales a {
+    color:rgb(255, 255, 255);
+    font-size: 80px;
+    text-decoration: none;
+}
+
+.redesSociales a:hover {
+    color:rgb(170, 245, 41);
+   
+}
+
+.redesSociales i:hover {
+    transform: scale(1.10);
+    transition: 0.3s ease-in-out;
+}
